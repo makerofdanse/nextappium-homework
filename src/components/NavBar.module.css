@@ -1,0 +1,50 @@
+.nav {
+    background: var(--light-pink);
+    padding: 1rem;
+    border-bottom: 2px solid var(--pink);
+    box-shadow: var(--shadow);
+    border-radius: 0 0 16px 16px;
+}
+
+.navList {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navItem {
+    position: relative;
+}
+
+.navLink {
+    font-size: 1.2rem;
+    color: var(--dark-pink);
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.navLink:hover {
+    background: var(--soft-pink);
+    color: var(--pink);
+    transform: scale(1.1);
+    text-shadow: var(--text-shadow);
+}
+
+.navLink::after {
+    content: "♥";
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 0.6rem;
+    color: var(--pink);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navLink:hover::after {
+    opacity: 1;
+}

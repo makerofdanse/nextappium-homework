@@ -1,20 +1,24 @@
-"use client";
-
 import Link from "next/link";
 import styles from "./NavBar.module.css";
 
 export default function NavBar() {
     return (
-        <nav>
-            <ul>
-                <li>
-                    <Link href="/">Home</Link>
+        <nav className={styles.nav}>
+            <ul className={styles.navList}>
+                <li className={styles.navItem}>
+                    <Link href="/" className={styles.navLink}>
+                        Home
+                    </Link>
                 </li>
-                <li>
-                    <Link href="/todolist">Todo List</Link>
+                <li className={styles.navItem}>
+                    <Link href="/todolist" className={styles.navLink}>
+                        Todo List
+                    </Link>
                 </li>
-                <li>
-                    <Link href="/calendar">Calendar</Link>
+                <li className={styles.navItem}>
+                    <Link href="/calendar" className={styles.navLink}>
+                        Calendar
+                    </Link>
                 </li>
             </ul>
         </nav>
