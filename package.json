@@ -1,15 +1,16 @@
 {
-  "name": "nextappium-homework",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "next": "15.5.3"
-  }
+    "name": "nextappium-homework",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "live": "live-server out"
+    },
+    "dependencies": {
+        "react": "19.1.0",
+        "react-dom": "19.1.0",
+        "next": "15.5.3"
+    }
 }
