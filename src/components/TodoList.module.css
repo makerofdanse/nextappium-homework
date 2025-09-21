@@ -1,0 +1,190 @@
+.todoContainer {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: "Inter", sans-serif;
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #ff6bcb;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(255, 107, 203, 0.5);
+}
+
+.newTaskForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #2a2a2a;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+.labeledInput {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.labeledInput label {
+    font-size: 1rem;
+    color: #a0a0a0;
+    font-weight: 500;
+}
+
+.labeledInput input {
+    padding: 0.75rem;
+    font-size: 1rem;
+    background: #333333;
+    color: #e0e0e0;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    outline: none;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.labeledInput input:focus {
+    border-color: #00ddeb;
+    box-shadow: 0 0 8px rgba(0, 221, 235, 0.5);
+}
+
+.submitButton {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(45deg, #ff6bcb, #00ddeb);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.submitButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 107, 203, 0.5);
+}
+
+.hr {
+    border: none;
+    border-top: 1px solid #444444;
+    margin: 1.5rem 0;
+}
+
+.deleteBtn {
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background: #ff5555;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.deleteBtn:hover {
+    background: #cc4444;
+    transform: translateY(-2px);
+}
+
+.taskList {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.taskItem {
+    background: #2a2a2a;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        background 0.2s ease;
+    cursor: move;
+}
+
+.taskItem.completed {
+    opacity: 0.7;
+    background: #252525;
+}
+
+.taskItem.completed .taskTitleText,
+.taskItem.completed .taskDescription {
+    text-decoration: line-through;
+    color: #606060;
+}
+
+.taskItem[draggable="true"]:hover {
+    transform: translateX(5px);
+    background: #333333;
+}
+
+.taskItem.dragOver {
+    border: 2px dashed #ff6bcb;
+    background: #3a3a3a;
+}
+
+.taskItem.dragging {
+    opacity: 0.5;
+    transform: scale(0.98);
+}
+
+.taskTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.taskTitleText {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #00ddeb;
+}
+
+.taskTitleButtons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.completeBtn {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    background: #55ff55;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.completeBtn:hover {
+    background: #44cc44;
+    transform: translateY(-2px);
+}
+
+.taskDescription {
+    font-size: 1rem;
+    color: #a0a0a0;
+}

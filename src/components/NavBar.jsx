@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import styles from "./NavBar.module.css";
 
 export default function NavBar() {
     return (
-        <nav className="bg-blue-500 p-4 text-white">
-            <ul className="flex space-x-4">
+        <nav>
+            <ul>
                 <li>
                     <Link href="/">Home</Link>
                 </li>
